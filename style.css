@@ -172,7 +172,7 @@ body {
 .owned-game { text-align: center; font-size: 11px; padding: 5px; position: relative; }
 .owned-game img { width: 100%; border-radius: 4px; border: 1px solid #2a475e; margin-bottom: 5px; }
 
-/* --- ПРОФИЛЬ (НОВОЕ) --- */
+/* --- ПРОФИЛЬ --- */
 .profile-editor {
   background: rgba(0, 0, 0, 0.3);
   padding: 20px;
@@ -245,32 +245,17 @@ body {
 .level-progress-container { height: 6px; background: rgba(0,0,0,0.5); width: 100%; margin-top: 5px; }
 .level-progress-bar { height: 100%; background: linear-gradient(90deg, #3a5d80, #66c0f4); transition: 0.5s; }
 
-/* --- ЭФФЕКТЫ --- */
+/* --- ДОПОЛНЕНИЯ (НЕ УДАЛЯТЬ, ЭТО ДЛЯ JS) --- */
 .click-number {
-  position: absolute;
-  color: #66c0f4;
-  font-weight: bold;
-  font-size: 24px;
-  pointer-events: none;
-  animation: particleUp 0.8s ease-out forwards;
+  position: absolute; color: #66c0f4; font-weight: bold; font-size: 24px;
+  pointer-events: none; animation: particleUp 0.8s ease-out forwards; z-index: 1000;
 }
-
-@keyframes particleUp {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-100px); opacity: 0; }
+@keyframes particleUp { 
+  0% { transform: translateY(0); opacity: 1; } 
+  100% { transform: translateY(-100px); opacity: 0; } 
 }
-
-#achievement-toast {
-  position: fixed; bottom: 20px; right: -450px;
-  background: #21323d; border-left: 4px solid #66c0f4;
-  padding: 12px 20px; display: flex; align-items: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.5s; z-index: 1000;
-}
-@keyframes slideIn {
-    from { transform: translateX(-150%); }
-    to { transform: translateX(0); }
-}
-
-#trailer-notification button:hover {
-    filter: brightness(1.2);
+#achievement-toast { 
+  position: fixed; bottom: 20px; right: -450px; 
+  background: #21323d; border-left: 4px solid #66c0f4; 
+  padding: 12px 20px; display: flex; align-items: center; transition: 0.5s; z-index: 1000; 
 }
